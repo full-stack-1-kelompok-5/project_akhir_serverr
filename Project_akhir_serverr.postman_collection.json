@@ -12,16 +12,80 @@
 				{
 					"name": "Register Admin",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "Admin2 Resto",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "admin2123@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin2123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4005/Admin/Register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4005",
+							"path": [
+								"Admin",
+								"Register"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Login Admin",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "Admin2 Resto",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "admin2123@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "admin2123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4005/Admin/Login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4005",
+							"path": [
+								"Admin",
+								"Login"
+							]
+						}
 					},
 					"response": []
 				}
@@ -33,16 +97,80 @@
 				{
 					"name": "Register Waiters",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "Waiters2 Resto",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "waiters2123@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "waiters2123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4005/Waiters/Register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4005",
+							"path": [
+								"Waiters",
+								"Register"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Login Waiters",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "Waiters2 Resto",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "waiters2123@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "waiters2123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4005/Waiters/Login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4005",
+							"path": [
+								"Waiters",
+								"Login"
+							]
+						}
 					},
 					"response": []
 				}
@@ -54,16 +182,79 @@
 				{
 					"name": "Register Kitchen",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "usename",
+									"value": "Wildan Umam",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "woldanumam33@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "wildan123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4005/Kitchen/Register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4005",
+							"path": [
+								"Kitchen",
+								"Register"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Login Kitchen",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "Kitchen2 Resto",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "kitchen2123@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "kitchen2123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4005/Kitchen",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4005",
+							"path": [
+								"Kitchen"
+							]
+						}
 					},
 					"response": []
 				}
@@ -76,31 +267,151 @@
 					"name": "Read Menu",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4005/Menu/Read",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4005",
+							"path": [
+								"Menu",
+								"Read"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Creat Menu",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "item_name",
+									"value": "Seblak Sultan",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "15.000",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "https://images.search.yahoo.com/search/images;_ylt=Awr.3EeasXdl3XkJl4uJzbkF;_ylu=c2VjA3NlYXJjaARzbGsDYnV0dG9u;_ylc=X1MDOTYwNjI4NTcEX3IDMgRmcgNtY2FmZWUEZnIyA3A6cyx2OmksbTpzYi10b3AEZ3ByaWQDNmp5ZDlUb1RSOENjRmYuU21FcVFfQQRuX3JzbHQDMARuX3N1Z2cDMwRvcmlnaW4DaW1hZ2VzLnNlYXJjaC55YWhvby5jb20EcG9zAzAEcHFzdHIDBHBxc3RybAMwBHFzdHJsAzEzBHF1ZXJ5A3NlYmxhayUyMHN1bHRhbgR0X3N0bXADMTcwMjM0MzA3OA--?p=seblak+sultan&fr=mcafee&fr2=p%3As%2Cv%3Ai%2Cm%3Asb-top&ei=UTF-8&x=wrt&type=E210US91215G0#id=6&iurl=https%3A%2F%2Fcdn-2.tstatic.net%2Ftravel%2Ffoto%2Fbank%2Fimages%2Fseblak-bandung.jpg&action=click",
+									"type": "text"
+								},
+								{
+									"key": "adminId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "waitersId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4005/Menu/Create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4005",
+							"path": [
+								"Menu",
+								"Create"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Update Menu",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "16",
+									"type": "text"
+								},
+								{
+									"key": "item_name",
+									"value": "Seblak Sultan Andara",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "25.000",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "https://images.search.yahoo.com/search/images;_ylt=Awr.3EeasXdl3XkJl4uJzbkF;_ylu=c2VjA3NlYXJjaARzbGsDYnV0dG9u;_ylc=X1MDOTYwNjI4NTcEX3IDMgRmcgNtY2FmZWUEZnIyA3A6cyx2OmksbTpzYi10b3AEZ3ByaWQDNmp5ZDlUb1RSOENjRmYuU21FcVFfQQRuX3JzbHQDMARuX3N1Z2cDMwRvcmlnaW4DaW1hZ2VzLnNlYXJjaC55YWhvby5jb20EcG9zAzAEcHFzdHIDBHBxc3RybAMwBHFzdHJsAzEzBHF1ZXJ5A3NlYmxhayUyMHN1bHRhbgR0X3N0bXADMTcwMjM0MzA3OA--?p=seblak+sultan&fr=mcafee&fr2=p%3As%2Cv%3Ai%2Cm%3Asb-top&ei=UTF-8&x=wrt&type=E210US91215G0#id=6&iurl=https%3A%2F%2Fcdn-2.tstatic.net%2Ftravel%2Ffoto%2Fbank%2Fimages%2Fseblak-bandung.jpg&action=click",
+									"type": "text"
+								},
+								{
+									"key": "adminId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "waitersId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4005/Menu/Update/17",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4005",
+							"path": [
+								"Menu",
+								"Update",
+								"17"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Delete Menu",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4005/Menu/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4005",
+							"path": [
+								"Menu",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "16"
+								}
+							]
+						}
 					},
 					"response": []
 				}
@@ -113,31 +424,145 @@
 					"name": "Read Order",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4005/Order/Read",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4005",
+							"path": [
+								"Order",
+								"Read"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Create Order",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "status",
+									"value": "Cooking",
+									"type": "text"
+								},
+								{
+									"key": "subtotal",
+									"value": "55.000",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2023-12-31T13:00:00.000Z",
+									"type": "text"
+								},
+								{
+									"key": "orderDetailId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "kitchenId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4005/Order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4005",
+							"path": [
+								"Order"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Update Order",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "status",
+									"value": "Ready",
+									"type": "text"
+								},
+								{
+									"key": "subtotal",
+									"value": "55.000",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "2023-12-31T13:00:00.000Z",
+									"type": "text"
+								},
+								{
+									"key": "orderdetailId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "kitchenId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4005/Order/Update/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4005",
+							"path": [
+								"Order",
+								"Update",
+								"6"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Delete Order",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4005/Order/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4005",
+							"path": [
+								"Order",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
 					},
 					"response": []
 				}
@@ -150,31 +575,171 @@
 					"name": "Read Order Detail",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4005/OrderDetail/Read",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4005",
+							"path": [
+								"OrderDetail",
+								"Read"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Update Order Detail",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "order",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "menu_item",
+									"value": "Margherita Pizza",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "subtotal",
+									"value": "82.000",
+									"type": "text"
+								},
+								{
+									"key": "kitchenId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "menuId",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "waitersId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4005/OrderDetail/Update/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4005",
+							"path": [
+								"OrderDetail",
+								"Update",
+								"3"
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Delete Order Detail",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:4005/OrderDetail/Delete/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4005",
+							"path": [
+								"OrderDetail",
+								"Delete",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
 					},
 					"response": []
 				},
 				{
 					"name": "Creat Order Detail",
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "order",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "item",
+									"value": "Chickem Alfaredo",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "subtotal",
+									"value": "110000",
+									"type": "text"
+								},
+								{
+									"key": "kitchenId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "menuId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "waitersId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4005/OrderDetail/Create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4005",
+							"path": [
+								"OrderDetail",
+								"Create"
+							]
+						}
 					},
 					"response": []
 				}

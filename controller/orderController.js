@@ -14,15 +14,15 @@ class Controller {
       static async CreateOrder(req, res) {
         const body = req.body;
       
-        const { status, subtotal, date, orderDetailId, kitchenId } = body;
+        const { subtotal, date, orderDetailId, kitchenId } = body;
       
         try {
           const order = await Order.create({
-            status, 
-            subtotal, 
-            date, 
-            orderDetailId, 
-            kitchenId
+            status: "order",
+            subtotal,
+            date,
+            orderDetailId,
+            kitchenId,
           });
       
           res.status(201).json({ data: { order: order }, msg: "OK" });
@@ -31,6 +31,7 @@ class Controller {
           res.status(500).json({ data: null, msg: `error ${JSON.stringify(error.response?.message)}` });
         }
       }
+      
 
       static async UpdateOrder(req, res) {
         const { id } = req.params;
@@ -43,13 +44,10 @@ class Controller {
             return res.status(404).json({ error: "Order not found" });
           }
       
-          // Update the order with the new data
           await order.update(body);
       
-          // Retrieve the updated order from the database
           const updatedOrder = await Order.findByPk(id);
       
-          // Respond with the updated order data
           res.status(201).json({ data: { order: updatedOrder }, msg: "OK" });
         } catch (error) {
           console.error(error);

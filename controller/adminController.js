@@ -3,25 +3,39 @@ const { Admin } = require("../models");
 const bcrypt = require('bcrypt');
 
 class Controller {
-    static registerAdmin(req, res)  {
-        const body = req.body;
-      
-        const { username, email, password } = body;
-      
-        Admin.create({
-          username,
-          email,
-          password,
-        }).then((admin) => {
-          res.status(201).json(admin);
-        }).catch((error) => {
-          res.status(500).json(error);
-        });
-    }
+  static registerAdmin(req, res) {
+    const body = req.body;
+  
+    const { username, email, password } = body;
+  
+    Admin.findOne({ where: { email } })
+      .then(existingAdmin => {
+        if (existingAdmin) {
+          res.status(400).json({ data: null, msg: "Email is already registered" });
+        } else {
+          
+          Admin.create({
+            username,
+            email,
+            password,
+          })
+            .then(admin => {
+              res.status(201).json({ data: { admin }, msg: "Admin created successfully" });
+            })
+            .catch(error => {
+              res.status(500).json({ data: null, msg: `Error: ${JSON.stringify(error.message)}` });
+            });
+        }
+      })
+      .catch(error => {
+        res.status(500).json({ data: null, msg: `Error: ${JSON.stringify(error.message)}` });
+      });
+  }
+  
 
     static async LoginAdmin(req, res) {
         const body = req.body;
-        const { email, password } = body;
+        const { email, password } = body; 
       
         try {
           const loggedAdmin = await Admin.findOne({ where: { email } });

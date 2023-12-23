@@ -3,21 +3,34 @@ const { Kitchen } = require("../models");
 const bcrypt = require('bcrypt');
 
 class Controller {
-    static RegisterKitchen(req, res)  {
-        const body = req.body;
-      
-        const { username, email, password } = body;
-      
-        Kitchen.create({
-          username,
-          email,
-          password,
-        }).then((kitchen) => {
-          res.status(201).json(kitchen);
-        }).catch((error) => {
-          res.status(500).json(error);
-        });
-    }
+  static registerKitchen(req, res) {
+    const body = req.body;
+  
+    const { username, email, password } = body;
+  
+    Kitchen.findOne({ where: { email } })
+      .then(existingKitchen => {
+        if (existingKitchen) {
+          res.status(400).json({ data: null, msg: "Email is already registered" });
+        } else {
+          
+          Kitchen.create({ 
+            username, 
+            email,
+            password,
+          })
+            .then(kitchen => {
+              res.status(201).json({ data: { kitchen }, msg: "Kitchen created successfully" });
+            })
+            .catch(error => {
+              res.status(500).json({ data: null, msg: `Error: ${JSON.stringify(error.message)}` });
+            });
+        }
+      })
+      .catch(error => {
+        res.status(500).json({ data: null, msg: `Error: ${JSON.stringify(error.message)}` });
+      });
+  }  
 
     static async LoginKitchen(req, res) {
         const body = req.body;

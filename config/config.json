@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "root",
-    "database": "restorant",
-    "host": "47.128.145.189",
+    "username": "vocasia",
+    "password": "vocasia",
+    "database": "restoran",
+    "host": "103.127.97.117",
     "dialect": "mysql"
   },
   "test": {

@@ -3,23 +3,36 @@ const { Waiters } = require("../models");
 const bcrypt = require('bcrypt');
 
 class Controller {
-    static registerWaiters(req, res)  {
-        const body = req.body;
-      
-        const { username, email, password } = body;
-      
-        Waiters.create({
-          username,
-          email,
-          password,
-        }).then((waiter) => {
-          res.status(201).json({ data: { waiter }, msg: "Waiter created successfully" });
-        })
-        .catch((error) => {
-          console.error(error);
-          res.status(500).json({ data: null, msg: `Error: ${JSON.stringify(error.message)}` });
-        });
-    }
+  static registerWaiters(req, res) {
+    const body = req.body;
+  
+    const { username, email, password } = body;
+
+    Waiters.findOne({ where: { email } })
+      .then(existingWaiter => {
+        if (existingWaiter) {
+          res.status(400).json({ data: null, msg: "Email is already registered" });
+        } else {
+        
+          Waiters.create({
+            username,
+            email,
+            password,
+          })
+            .then(waiter => {
+              res.status(201).json({ data: { waiter }, msg: "Waiter created successfully" });
+            })
+            .catch(error => {
+              console.error(error); 
+              res.status(500).json({ data: null, msg: `Error: ${JSON.stringify(error.message)}` });
+            });
+        }
+      })
+      .catch(error => {
+        console.error(error);
+        res.status(500).json({ data: null, msg: `Error: ${JSON.stringify(error.message)}` });
+      });
+  }  
 
     static async LoginWaiters(req, res) {
         const body = req.body;
